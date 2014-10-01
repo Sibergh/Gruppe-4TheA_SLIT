@@ -11,11 +11,12 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
+        
+        
       </ui:define>
 
       <ui:define name="menuitems">
-        <ui:include src="/student/menu.xhtml" />
+        <ui:include src="/teacher/menu.xhtml" />
       </ui:define>
     </ui:composition>
   </h:body>
