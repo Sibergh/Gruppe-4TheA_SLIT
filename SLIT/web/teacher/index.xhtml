@@ -10,8 +10,17 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
+        <div id="">
         <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.home}</p>
+        <p>#{uistrings.intro}</p>
+        
+        <button id="Blue">Studenter</button>
+        <button id="Red">Evaluering</button>
+        <button id="Green">*-*</button>
+            
+        </div>
+        
+        
       </ui:define>
 
       <ui:define name="menuitems">

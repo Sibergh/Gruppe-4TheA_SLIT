@@ -84,3 +84,14 @@ th.prompt {
 td.input {
   text-align: left;
 }
+
+
+
+
+#Blue{background-color: lightskyblue;height: 100px;width: 100px;alignment-adjust: left;}
+#Red{background-color: red;height: 100px;width: 100px;alignment-adjust: center;}
+#Green{background-color: green;height: 100px;width: 100px;alignment-adjust: right;}
+
+
+
+
