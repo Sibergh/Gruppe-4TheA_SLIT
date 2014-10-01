@@ -10,31 +10,19 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        
-        
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.introL}</p>
-
-        <div id="Blue">
-        <form style="display: inline" action="students.xhtml">
-        <button id="Blue">#{uistrings.students}</button>
-        </form>
-        </div>
-
-        <div id="Red">
-        <form style="display: inline" action="assessment.xhtml">
-        <button id="Red">#{uistrings.assessment}</button>
-        </form>
-        </div>
-        
-        <div id="Green">
-        <form style="display: inline" action="#">
-        <button id="Green">#{uistrings.profile}</button>
-        </form>
-        </div>
-        
-        
-        
+        <h2>#{uistrings.students}</h2>
+        <h3>#{uistrings.students_desc}</h3>
+        <h:dataTable styleClass="data" value="" var="m">
+          <h:column>
+            <f:facet name="header">#{uistrings.students}</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">#{uistrings.module_name}</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">#{uistrings.module_description}</f:facet>
+          </h:column>
+        </h:dataTable>
       </ui:define>
 
       <ui:define name="menuitems">

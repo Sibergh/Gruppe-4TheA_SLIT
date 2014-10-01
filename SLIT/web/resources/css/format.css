@@ -87,13 +87,7 @@ td.input {
   text-align: left;
 }
 
-
-
-
-#Blue{background-color: lightskyblue;height: 100px;width: 100px;alignment-adjust: left;}
-#Red{background-color: red;height: 100px;width: 100px;alignment-adjust: center;}
-#Green{background-color: green;height: 100px;width: 100px;alignment-adjust: right;}
-
-
-
-
+/* Spesifikt for lærer: */
+#Blue{background-color: lightskyblue;height: 150px;width: 150px;alignment-adjust: left;clear: both;display: inline-block;margin: 0px;padding: 0px;}
+#Red{background-color: red;height: 150px;width: 150px;alignment-adjust: center;clear: both;display: inline-block;}
+#Green{background-color: green;height: 150px;width: 150px;alignment-adjust: right;clear: both;display: inline-block;}
