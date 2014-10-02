@@ -10,8 +10,24 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
+        <div name="mainbox">
+            <form style="display: inline" action="../register.xhtml">
+            <button style="display: inline-block;float: right;">Rediger profil</button>
+            </form>
+            <h2>#{uistrings.profile}</h2>
+                
+            <div id="grey_pictureframe"><br/>BILDE
+            </div>
+                
+            
+            <p>Brukernavn: <h:outputText rendered="#{authInfoBean.loggedIn}" value="#{authInfoBean.userName}"/></p>
+            <p>Fornavn:</p>
+            <p>Etternavn:</p>
+            <p>Epost:</p>
+            <p>Telefon:</p>
+            <p>Kurs:</p>
+
+        </div>
       </ui:define>
 
       <ui:define name="menuitems">
