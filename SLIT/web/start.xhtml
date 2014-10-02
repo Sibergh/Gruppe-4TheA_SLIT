@@ -1,32 +1,40 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-  
+      xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
-        <title>Log In or register</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <title>${uistrings.login_title}</title>
+    <h:outputStylesheet name="layout.css" library="css" />
+    <h:outputStylesheet name="format.css" library="css" />
     </h:head>
+    
     <h:body class="backlogin">
-        
-        
         <div class="main-login">
-            <h>Logg inn</h>
+            <h>${uistrings.login_title}</h>
             <br/>
-                <div class="loginfield">
-                    <input type="text" placeholder="E-post" class="log-field"/> 
-                    <br/>
-                    <input type="text" placeholder="Passord" class="log-field"/>
-                    <br/>
-                    <input class="button1" type="submit" value="Logg Inn"/>
-                    <input class="button1" type="submit" value="Registrer"/>
-                </div>
-                <div class="submitfield">
-
-                </div>
-        </div>
+            <form method="post" action="j_security_check" class="loginfield">
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <td><input type="text" placeholder="#{uistrings.username}" class="log-field" name="j_username"/></td> 
+                    </tr>
+                    <tr>
+                        <td><input type="password" placeholder="#{uistrings.password}" class="log-field" name="j_password"/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select required="1"  class="button1">
+                                <option value="1">#{uistrings.selectgroup}</option>
+                                <option value="2">#{uistrings.student}</option>
+                                <option value="3">#{uistrings.teacher}</option>
+                                <option value="4">#{uistrings.admin}</option>
+                            </select>
+                            <input class="button1" type="submit" value="#{uistrings.login_title}"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>   
     </h:body>
 </html>
