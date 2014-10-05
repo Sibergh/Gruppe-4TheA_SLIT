@@ -10,8 +10,26 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.student_intro}</p>
+        <h2>Studenter</h2>
+        
+        <h:form>
+            Finn student:
+            <input type="search" name="student"/>
+            <input type="submit" value="Søk"/>
+        </h:form>
+        
+        <h:dataTable styleClass="data" value="" var="m">
+          <h:column>
+            <f:facet name="header">Navn</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Status modul: (Søkt Modul)</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Pågående modul</f:facet>
+          </h:column>
+        </h:dataTable>
+        
       </ui:define>
 
       <ui:define name="menuitems">

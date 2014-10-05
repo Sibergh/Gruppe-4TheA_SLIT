@@ -10,8 +10,25 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.student_intro}</p>
+        <h2>Vurdering</h2>
+        <h:dataTable styleClass="data" value="" var="m">
+          <h:column>
+            <f:facet name="header">#{uistrings.module_no}</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Dato</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Filnavn</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Kommentar</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Vurdering</f:facet>
+          </h:column>
+        </h:dataTable>
+        
       </ui:define>
 
       <ui:define name="menuitems">
