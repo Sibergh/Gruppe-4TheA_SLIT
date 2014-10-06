@@ -252,7 +252,7 @@
             </and>
         </condition>
         <fail if="missing.j2ee.server.home">
-The Java EE server classpath is fuck off correctly set up - server home directory is missing.
+The Java EE server classpath is not correctly set up - server home directory is missing.
 Either open the project in the IDE and assign the server or setup the server classpath manually.
 For example like this:
    ant -Dj2ee.server.home=&lt;app_server_installation_directory&gt;
