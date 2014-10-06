@@ -1,2 +1,12 @@
+
+##############
+## NetBeans'N shit ##
+##############
+
+/SLIT/nbproject/private/
+/SLIT/nbbuild/
+/SLIT/nbdist/
+/SLIT/nbactions.xml
+/SLIT/nb-configuration.xml
 /SLIT/build/
 /SLIT/dist/
