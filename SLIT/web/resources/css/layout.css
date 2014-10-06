@@ -146,3 +146,33 @@ div.layout-outer {
 	position:relative;
 	top:1px;
 }
+
+
+/* lærerportal/kurs modul side*/
+
+.kursCont {
+    width: auto;
+    height: auto;
+}
+
+.path {
+    height: 30px;
+
+}
+
+.infobar {
+    height: 50px;
+    border-radius: 10px;
+    background-color: #B0B0B0;
+    margin:10px;
+
+}
+
+.modulebox {
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #B0B0B0;
+    margin:10px;
+
+}
