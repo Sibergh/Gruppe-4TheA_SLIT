@@ -96,3 +96,28 @@ td.input {
 #Red{background-color: red;height: 150px;width: 150px;alignment-adjust: center;clear: both;display: inline-block;}
 #Green{background-color: green;height: 150px;width: 150px;alignment-adjust: right;clear: both;display: inline-block;}
 
+#module_square{
+display: inline-block;
+
+font-family: serif;
+font-size: 30px;
+padding-top: 10px;
+margin-right: 10px;
+width: 100px;
+height: 100px;
+background: red;
+box-shadow: 4px 4px 2px #888888;
+border-radius: 5px;
+text-align: center;
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #5264D4),
+	color-stop(1, #26496E)
+);
+background-image: -o-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
+background-image: -moz-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
+background-image: -webkit-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
+background-image: -ms-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
+background-image: linear-gradient(to bottom, #5264D4 0%, #26496E 100%);};
