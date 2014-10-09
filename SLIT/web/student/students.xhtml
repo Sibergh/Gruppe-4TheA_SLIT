@@ -18,15 +18,20 @@
             <input type="submit" value="Søk"/>
         </h:form>
         
-        <h:dataTable styleClass="data" value="" var="m">
+        <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
           <h:column>
             <f:facet name="header">Navn</f:facet>
+            #{user.username}
           </h:column>
           <h:column>
             <f:facet name="header">Status modul: (Søkt Modul)</f:facet>
           </h:column>
           <h:column>
             <f:facet name="header">Pågående modul</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Rolle</f:facet>
+            #{user.groups}
           </h:column>
         </h:dataTable>
         

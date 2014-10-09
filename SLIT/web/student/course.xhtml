@@ -11,8 +11,25 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         <h2>#{uistrings.modules}</h2>
+      
+      Velg Kurs:
+      <h:selectOneMenu id="courses"
+                         value="#">
+            <f:selectItem id="course1" itemLabel="IS-102" itemValue="1" />
+            <f:selectItem id="course2" itemLabel="IS-200" itemValue="2" />
+      </h:selectOneMenu>
+      <br/>
+      <br/>
+      <div id="module_square">Modul 1</div>
+      <div id="module_square">Modul 2</div>
+      <div id="module_square">Modul 3</div>
+      <div id="module_square">Modul 4</div>
+      <div id="module_square">Modul 5</div>
+      <div id="module_square">Modul 6</div>
+      
       </ui:define>
-
+        
+      
       <ui:define name="menuitems">
         <ui:include src="/student/menu.xhtml" />
       </ui:define>
