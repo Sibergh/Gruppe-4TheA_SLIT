@@ -1,6 +1,18 @@
 create database slitV3;
 use slitv3;
 
+set sql_safe_updates=1;
+
+create table usermodule(
+ModNo int NOT NULL auto_increment,
+status1 int(30),
+ModDesc varchar(255),
+ModGoal varchar(500),
+Resources varchar(120),
+Modcrit varchar(500),
+constraint ModNo_pk primary key (ModNo)
+);
+
 create table users(
 userID int NOT NULL auto_increment,
 fName varchar(30),
@@ -11,16 +23,6 @@ pw varchar(30),
 ModNo int(3),
 constraint users_userID_pk primary key (userID),
 constraint users_ModNo_fk foreign key  (ModNo) references usermodule (ModNo)
-);
-
-create table usermodule(
-ModNo int NOT NULL auto_increment,
-status1 int(30),
-ModDesc varchar(255),
-ModGoal varchar(500),
-Resources varchar(120),
-Modcrit varchar(500),
-constraint ModNo_pk primary key (ModNo)
 );
 
 
