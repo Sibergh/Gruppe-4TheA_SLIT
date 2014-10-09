@@ -55,3 +55,6 @@ constraint commentDesc_pk primary key (commentDesc),
 constraint comments_usermodule_fk foreign key  (ModNo) references usermodule (ModNo),
 constraint comments_userID_fk foreign key  (userID) references users (userID)
 );
+
+
+select * from users;
