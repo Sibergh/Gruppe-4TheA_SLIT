@@ -13,7 +13,7 @@ public class Connect
 {
         public static void main(String[] args) {
                 String url = "jdbc:mysql://localhost:3306/";
-                String dbName = "slitDBv4";
+                String dbName = "slitdbv4";
                 String driver = "com.mysql.jdbc.Driver";
                 String userName = "root";
                 String password = "";

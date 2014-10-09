@@ -1,6 +1,5 @@
-create database slitV3;
-use slitv3;
-
+create database slitdbV4;
+use slitdbv4;
 set sql_safe_updates=1;
 
 create table usermodule(
