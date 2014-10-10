@@ -1,4 +1,4 @@
-create database slitdbV4;
+create database slitdbv4;
 use slitdbv4;
 set sql_safe_updates=1;
 
