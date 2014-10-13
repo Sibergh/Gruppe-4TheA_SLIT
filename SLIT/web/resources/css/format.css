@@ -97,14 +97,15 @@ td.input {
 #Green{background-color: green;height: 150px;width: 150px;alignment-adjust: right;clear: both;display: inline-block;}
 
 #module_square{
-display: inline-block;
+display: table-cell;
 
+vertical-align:middle;
 font-family: serif;
-font-size: 30px;
-padding-top: 10px;
+font-size: 60px;
+font-weight: bold;
 margin-right: 10px;
-width: 100px;
-height: 100px;
+width: 90px;
+height: 90px;
 background: red;
 box-shadow: 4px 4px 2px #888888;
 border-radius: 5px;
@@ -120,4 +121,4 @@ background-image: -o-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
 background-image: -moz-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
 background-image: -webkit-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
 background-image: -ms-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
-background-image: linear-gradient(to bottom, #5264D4 0%, #26496E 100%);};
+};

@@ -10,19 +10,20 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <div class="kursCont">
-            <div class="path">
-                 <!-- øverst til venstre type: SLIT > Lærer > Kurs--><p> path Eksempel: SLIT > Lærer > Kurs</p>
-            </div>
-            <p>#{uistrings.introL}</p>
-            <div class="infobar">
-                <p> innhold: kurs navn, redigering av kurs, velg kurs og opprett kurs</p>
-            </div>
-            <div class="modulebox">
-                <p> innhold: modulene som er opprettet, samnt tom modul for oppretting av ny</p>
-            </div>
-            
-        </div>
+        <h2>Moduler</h2> 
+          
+        Velg Kurs:
+        <h:selectOneMenu id="courses"
+                         value="#">
+            <f:selectItem id="course1" itemLabel="IS-102" itemValue="1" />
+            <f:selectItem id="course2" itemLabel="IS-200" itemValue="2" />
+        </h:selectOneMenu>
+           
+        <br/>
+        <br/>
+        <div id="module_square" style="cursor: pointer;" onclick="location.href='createModule.xhtml';">&nbsp;+</div>
+        
+        
         
         
         
