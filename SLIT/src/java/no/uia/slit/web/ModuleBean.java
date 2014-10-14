@@ -32,7 +32,7 @@ public class ModuleBean implements Serializable {
         
         
         selectedModule = new Module();
-        moduleSvc.saveModule(selectedModule);
+        
         return Page.module;
     }
 
@@ -44,12 +44,15 @@ public class ModuleBean implements Serializable {
         if (null == selectedModule) {
             selectedModule = new Module();
         }
-        moduleSvc.saveModule(selectedModule);
         return Page.module;
     }
 
+    public Page saveSelectedModule(){
+        moduleSvc.saveModule(selectedModule);
+        return Page.modules;
+    }
+    
     public Module getSelectedModule() {
-        System.out.println("getSelectedModule() returning "+selectedModule);
         return selectedModule;
     }
 }

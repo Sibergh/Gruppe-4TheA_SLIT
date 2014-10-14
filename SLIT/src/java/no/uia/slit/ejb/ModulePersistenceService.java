@@ -1,6 +1,7 @@
 package no.uia.slit.ejb;
 
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -11,6 +12,7 @@ import no.uia.slit.entity.Module;
  *
  * @author even
  */
+@Stateless
 public class ModulePersistenceService {
 
    @PersistenceContext

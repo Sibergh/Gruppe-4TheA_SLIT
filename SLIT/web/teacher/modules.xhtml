@@ -8,16 +8,21 @@
     <title>Facelet Title</title>
   </h:head>
   <h:body>
+      
+   
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
+          
         <h2>#{uistrings.modules}</h2>
         <h3>#{uistrings.module_list_header}</h3>
-        <h:dataTable styleClass="data" value="" var="m">
+        <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
           <h:column>
             <f:facet name="header">#{uistrings.module_no}</f:facet>
+            #{module.id}
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_name}</f:facet>
+            #{module.name}
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_description}</f:facet>
