@@ -106,19 +106,8 @@ font-weight: bold;
 margin-right: 10px;
 width: 90px;
 height: 90px;
-background: red;
 box-shadow: 4px 4px 2px #888888;
 border-radius: 5px;
 text-align: center;
-background-image: -webkit-gradient(
-	linear,
-	left top,
-	left bottom,
-	color-stop(0, #5264D4),
-	color-stop(1, #26496E)
-);
-background-image: -o-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
-background-image: -moz-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
-background-image: -webkit-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
-background-image: -ms-linear-gradient(bottom, #5264D4 0%, #26496E 100%);
+border: solid 1px;
 };
