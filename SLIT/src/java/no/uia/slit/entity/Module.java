@@ -25,10 +25,6 @@ public class Module {
    private Module requiredModule;
    
    public Module() {
-       this.id=id;
-       this.name=name;
-       this.description=description;
-       this.requiredModule=requiredModule;
    }
 
    public long getId() {
