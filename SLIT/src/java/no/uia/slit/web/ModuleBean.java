@@ -29,7 +29,10 @@ public class ModuleBean implements Serializable {
 
     /** Set up module form for adding a new module */
     public Page createModule() {
+        
+        
         selectedModule = new Module();
+        moduleSvc.saveModule(selectedModule);
         return Page.module;
     }
 
@@ -41,10 +44,12 @@ public class ModuleBean implements Serializable {
         if (null == selectedModule) {
             selectedModule = new Module();
         }
+        moduleSvc.saveModule(selectedModule);
         return Page.module;
     }
 
     public Module getSelectedModule() {
+        System.out.println("getSelectedModule() returning "+selectedModule);
         return selectedModule;
     }
 }

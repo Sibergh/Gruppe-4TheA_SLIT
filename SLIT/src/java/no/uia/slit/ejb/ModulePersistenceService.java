@@ -31,12 +31,12 @@ public class ModulePersistenceService {
    }
 
    /** Save a module in the database */
-   public void save(Module m) {
+   public void saveModule(Module m) {
        em.merge(m);
    }
 
    /** Remove a module from the database */
-   public void remove(Module m) {
+   public void removeModule(Module m) {
        em.remove(m);
    }
 }
