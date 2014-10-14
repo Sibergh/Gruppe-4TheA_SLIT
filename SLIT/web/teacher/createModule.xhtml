@@ -14,6 +14,9 @@
         <h2>Lag modul</h2>
         <h:form id="moduleform">
           <h:panelGrid columns="2">
+            
+            <h:outputText value="#{moduleBean.selectedModule.id}"/>
+            
             <h:outputText value="Modul navn:"/>
             <h:panelGroup>
                 <h:inputText id="name" value="#{moduleBean.selectedModule.name}"/>

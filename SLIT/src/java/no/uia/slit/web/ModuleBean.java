@@ -3,7 +3,7 @@ package no.uia.slit.web;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.enterprise.context.ConversationScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import no.uia.slit.ejb.ModulePersistenceService;
 import no.uia.slit.entity.Module;
@@ -14,7 +14,7 @@ import no.uia.slit.entity.Module;
  * @author even
  */
 @Named("moduleBean")
-@ConversationScoped
+@SessionScoped
 public class ModuleBean implements Serializable {
     @EJB private ModulePersistenceService moduleSvc;
     private Module selectedModule;
