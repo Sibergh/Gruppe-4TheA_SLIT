@@ -10,7 +10,7 @@ package no.uia.slit.web;
 public enum Page {
     home("/index"),
     teacher("/teacher/index"),
-    modules,
+    modules("courses"),
     module("createModule"),
 
     admin("/admin/index"),
