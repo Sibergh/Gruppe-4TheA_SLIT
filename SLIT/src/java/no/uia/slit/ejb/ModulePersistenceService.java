@@ -19,7 +19,7 @@ public class ModulePersistenceService {
    private EntityManager em;
 
    /** Retrieve the module with the specified id from the database */
-   public Module find(long id) {
+    public Module find(long id) {
        Module m = em.find(Module.class, id);
        return m;
    }
