@@ -15,6 +15,11 @@
           
         <h2>#{uistrings.modules}</h2>
         <h3>#{uistrings.module_list_header}</h3>
+        
+        <h:form>
+        <h:commandLink action="#{moduleBean.deleteModule()}" value="Slett modul"></h:commandLink>
+        </h:form>
+        
         <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
           <h:column>
             <f:facet name="header">#{uistrings.module_no}</f:facet>

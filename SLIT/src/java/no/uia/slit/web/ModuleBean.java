@@ -35,6 +35,11 @@ public class ModuleBean implements Serializable {
         
         return Page.module;
     }
+    
+    public Page deleteModule(){
+        
+        return Page.delete;
+    }
 
     /** Prepare module form for editing an existing module.
      * If the requested module does not exist, a new module
@@ -50,6 +55,11 @@ public class ModuleBean implements Serializable {
     public Page saveSelectedModule(){
         moduleSvc.saveModule(selectedModule);
         return Page.modules;
+    }
+    
+    public Page deleteSelectedModule(){
+        moduleSvc.removeModule(selectedModule);
+        return Page.doneDelete;
     }
     
     public Module getSelectedModule() {
