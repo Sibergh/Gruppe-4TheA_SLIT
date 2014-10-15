@@ -11,12 +11,13 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         <h2>Vurdering</h2>
-        <h:dataTable styleClass="data" value="" var="m">
+        <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
           <h:column>
-            <f:facet name="header">#{uistrings.module_no}</f:facet>
+            <f:facet name="header">Modul navn:</f:facet>
+            #{module.name}
           </h:column>
           <h:column>
-            <f:facet name="header">Dato</f:facet>
+            <f:facet name="header">Dato levert:</f:facet>
           </h:column>
           <h:column>
             <f:facet name="header">Filnavn</f:facet>
