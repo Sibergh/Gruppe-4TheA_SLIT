@@ -111,3 +111,27 @@ border-radius: 5px;
 text-align: center;
 border: solid 1px;
 };
+
+
+.buttons input {
+    margin: 5px;
+    padding: 5px 5px 5px 20px; /* 20px makes room for your background image */
+    border: 1px solid #aaa;
+}
+
+.buttons .button {
+    display: table-cell;
+    vertical-align:middle;
+    font-family: serif;
+    font-size: 60px;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 4px 4px 2px #888888;
+    border-radius: 5px;
+    text-align: center;
+    border: solid 1px;
+    text-decoration: none;
+    color: black;
+} 

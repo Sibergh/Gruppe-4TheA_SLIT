@@ -21,7 +21,12 @@
            
         <br/>
         <br/>
-        <h:form><h:commandLink action="#{moduleBean.createModule()}" value="Ny modul"></h:commandLink></h:form>
+        <h:form>
+            
+            <div class="buttons">
+            <h:commandLink action="#{moduleBean.createModule()}" value="&nbsp;+" styleClass="button"></h:commandLink>
+            </div>
+        </h:form>
         
         <!--<div id="module_square" style="cursor: pointer;" onclick="location.href='createModule.xhtml';">&nbsp;+</div>-->
         
