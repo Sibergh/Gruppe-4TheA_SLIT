@@ -12,6 +12,7 @@ public enum Page {
     teacher("/teacher/index"),
     modules("courses"),
     module("createModule"),
+    dispMod("displayModule"),
     doneDelete("modules"),
     delete("deleteModule"),
 

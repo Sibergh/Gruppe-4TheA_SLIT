@@ -29,11 +29,12 @@ public class ModuleBean implements Serializable {
 
     /** Set up module form for adding a new module */
     public Page createModule() {
-        
-        
         selectedModule = new Module();
-        
         return Page.module;
+    }
+    
+    public Page displayModule (){
+        return Page.dispMod;
     }
     
     public Page deleteModule(){

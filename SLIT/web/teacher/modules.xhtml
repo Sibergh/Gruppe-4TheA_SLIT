@@ -23,7 +23,7 @@
         <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
           <h:column>
             <f:facet name="header">#{uistrings.module_no}</f:facet>
-            <h:form><h:commandLink action="#{ModulePersistenceService.find(module.id)}" value="#{module.id}"></h:commandLink></h:form>
+            <h:form><h:commandLink action="#{moduleBean.displayModule(module.id)}" value="#{module.id}"></h:commandLink></h:form>
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_name}</f:facet>
