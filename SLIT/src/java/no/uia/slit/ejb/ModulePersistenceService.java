@@ -23,6 +23,11 @@ public class ModulePersistenceService {
        Module m = em.find(Module.class, id);
        return m;
    }
+   
+   public Module findToDelete(String name){
+       Module m = em.find(Module.class, name);
+       return m;
+   }
 
    /** Return a list of all modules defined in the database */
    public List<Module> findAll() {
