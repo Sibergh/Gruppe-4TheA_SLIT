@@ -6,6 +6,10 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
     <title>Facelet Title</title>
+    
+    <f:metadata>
+      <f:viewParam name="id" value="#{moduleBean.selectedModule.id}" />
+    </f:metadata>
   </h:head>
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">

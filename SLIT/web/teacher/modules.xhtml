@@ -23,11 +23,11 @@
         <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
           <h:column>
             <f:facet name="header">#{uistrings.module_no}</f:facet>
-            <h:form><h:commandLink action="#{moduleBean.displayModule(module.id)}" value="#{module.id}"></h:commandLink></h:form>
+            #{module.id}
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_name}</f:facet>
-            #{module.name}
+            <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_description}</f:facet>
