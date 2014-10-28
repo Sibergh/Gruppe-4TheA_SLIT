@@ -17,7 +17,7 @@
         <h:dataTable styleClass="data" value="#{modlistbean.modules}" var="module">
           <h:column>
             <f:facet name="header">Modulnavn</f:facet>
-            <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
+            <h:link outcome="module?id=#{module.id}">#{module.name}</h:link>
           </h:column>
           <h:column>
             <f:facet name="header">Dato</f:facet>

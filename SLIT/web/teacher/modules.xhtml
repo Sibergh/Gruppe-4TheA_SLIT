@@ -24,7 +24,7 @@
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_name}</f:facet>
-            <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
+            <h:link outcome="module?id=#{module.id}">#{module.name}</h:link>
           </h:column>
           <h:column>
             <f:facet name="header">#{uistrings.module_description}</f:facet>
@@ -32,7 +32,7 @@
           </h:column>
         </h:dataTable>
         
-        <h:link value="Lag ny modul" outcome="createModule?id=0" />
+        <h:link value="Lag ny modul" outcome="module?id=0" />
         
       </ui:define>
 
