@@ -10,6 +10,7 @@ package no.uia.slit.web;
 public enum Page {
     home("/index"),
     teacher("/teacher/index"),
+    course,
     modules,
     module,
     delete,

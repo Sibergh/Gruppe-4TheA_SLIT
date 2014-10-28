@@ -104,5 +104,19 @@ public class ModuleBean implements Serializable {
         conv.end();
 
         return Page.modules;
-    }   
+    }
+    
+    public Page cancelModuleCreation(){
+        conv.end();
+        return Page.modules;
+    }
+    
+    public Page studentCancelModuleView(){
+        conv.end();
+        return Page.course;
+    }
+    
+    public void endConv(){
+        conv.end();
+    }
 }

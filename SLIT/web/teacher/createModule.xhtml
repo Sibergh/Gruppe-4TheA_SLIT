@@ -50,8 +50,7 @@
           <h:commandButton value="Endre modul"
                            action="#{moduleBean.editModule}" rendered="#{moduleBean.updating}" />
           <h:commandButton value="Avbryt"
-                           immediate="true"
-                           action="modules" />
+                           action="#{moduleBean.cancelModuleCreation}" />
           </h:panelGroup>
         </h:panelGrid>
         </h:form>

@@ -15,15 +15,9 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
         
-        <h2>Lag modul</h2>
+          <h2>#{moduleBean.name}</h2>
         <h:form id="moduleform">
             <h:panelGrid columns="2">
-            
-            <h:outputText value="Modul navn:" style="font-weight:bold"/>
-            <h:panelGroup>
-              <h:outputText value="#{moduleBean.name}" />
-              <h:message for="name" />
-            </h:panelGroup>
             
             <h:outputText value="Beskrivelse:" style="font-weight:bold"/>
             <h:panelGroup>
@@ -39,8 +33,7 @@
           <h:panelGroup>
           <br/>
           <h:commandButton value="Tilbake"
-                           immediate="true"
-                           action="course" />
+                           action="#{moduleBean.studentCancelModuleView}" />
           </h:panelGroup>
         </h:panelGrid>
         </h:form>
