@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <h:head>
+    <title>Facelet Title</title>
+    
+    <f:metadata>
+      <f:viewParam name="id" value="#{moduleBean.id}" />
+    </f:metadata>
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/masterlayout.xhtml">
+      <ui:define name="content">
+        
+          <h2>#{moduleBean.name}</h2>
+        <h:form id="moduleform">
+            <h:panelGrid columns="2">
+            
+            <h:outputText value="Beskrivelse:" style="font-weight:bold"/>
+            <h:panelGroup>
+              <h:outputText value="#{moduleBean.description}" />
+              <h:message for="description" />
+            </h:panelGroup>
+          
+
+          <!-- the available actions are displayed as buttons. The delete
+          action is only meaningful for existing departments -->
+          <!-- the cancel button needs an immediate="true" attribute, to
+           bypass input validation -->
+          <h:panelGroup>
+          <br/>
+          <h:commandButton value="Tilbake"
+                           action="#{moduleBean.studentCancelModuleView}" />
+          </h:panelGroup>
+        </h:panelGrid>
+        </h:form>
+        
+        
+        
+      </ui:define>
+
+      <ui:define name="menuitems">
+        <ui:include src="/student/menu.xhtml" />
+      </ui:define>
+    </ui:composition>
+  </h:body>
+</html>
+
