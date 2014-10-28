@@ -46,11 +46,11 @@
           <h:panelGroup>
               
           <h:commandButton value="Lagre ny modul"
-                           action="#{moduleBean.saveModule}" rendered="#{modulebean.updating}" />
-          <h:commandButton value="Slett modul"
-                           action="#{moduleBean.deleteModule}" rendered="#{moduleBean.updating}" />
+                           action="#{moduleBean.saveModule}" rendered="#{moduleBean.notUpdating}" />
           <h:commandButton value="Endre modul"
                            action="#{moduleBean.editModule}" rendered="#{moduleBean.updating}" />
+          <h:commandButton value="Slett modul"
+                           action="#{moduleBean.deleteModule}" rendered="#{moduleBean.updating}" />
           <h:commandButton value="Avbryt"
                            action="#{moduleBean.cancelModuleCreation}" />
           </h:panelGroup>
