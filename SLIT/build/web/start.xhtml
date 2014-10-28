@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    <title>${uistrings.login_title}</title>
+    <h:outputStylesheet name="layout.css" library="css" />
+    <h:outputStylesheet name="format.css" library="css" />
+    </h:head>
+    
+    <h:body class="backlogin">
+        <div class="main-login">
+            <h>${uistrings.login_title}</h>
+            <br/>
+            <form method="post" action="j_security_check" class="loginfield">
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <td><input type="text" placeholder="#{uistrings.username}" class="log-field" name="j_username"/></td> 
+                    </tr>
+                    <tr>
+                        <td><input type="password" placeholder="#{uistrings.password}" class="log-field" name="j_password"/></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select required="1"  class="button1">
+                                <option value="1">#{uistrings.selectgroup}</option>
+                                <option value="2">#{uistrings.student}</option>
+                                <option value="3">#{uistrings.teacher}</option>
+                                <option value="4">#{uistrings.admin}</option>
+                            </select>
+                            <input class="button1" type="submit" value="#{uistrings.login_title}"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>   
+    </h:body>
+</html>
