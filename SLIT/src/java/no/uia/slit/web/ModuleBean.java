@@ -22,6 +22,7 @@ public class ModuleBean implements Serializable {
     @EJB ModulePersistenceService moduleSvc;
     private Module module;
     private boolean updating;
+    private boolean notupdating;
     
     private long id;
     private String name;
@@ -40,12 +41,14 @@ public class ModuleBean implements Serializable {
             // we will get here if depNo is not a valid, or if
             // depNo is valid but there is no department with that depno
             updating = false;
+            notupdating = true;
             id = 0;
             name = "";
             description = "";
         }
         else {
             updating = true;
+            notupdating = false;
             this.id = mod.getId();
             name = mod.getName();
             description = mod.getDescription();
@@ -74,6 +77,10 @@ public class ModuleBean implements Serializable {
     
     public boolean isUpdating(){
         return updating;
+    }
+
+    public boolean isNotUpdating(){
+        return notupdating;
     }
     
     private Module createModObject() {
