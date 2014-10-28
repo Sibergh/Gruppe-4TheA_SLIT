@@ -9,14 +9,18 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+<<<<<<< HEAD
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
+=======
+>>>>>>> parent of be203f3... .
 
 /**
  *
  * @author even
  */
 @Entity
+<<<<<<< HEAD
 @NamedQuery(name = "Teacher.byUsername",
         query = "select t from Teacher t where t.username = :username")
 public class Teacher implements Serializable {
@@ -29,6 +33,15 @@ public class Teacher implements Serializable {
    @OneToOne
    private DownloadableFile cv;
 
+=======
+public class Teacher implements Serializable {
+   @Id @GeneratedValue
+   private long id;
+   
+   @Column(unique=true)
+   private String username;
+
+>>>>>>> parent of be203f3... .
    public Teacher() {
    }
 
@@ -47,6 +60,7 @@ public class Teacher implements Serializable {
    public void setUsername(String username) {
       this.username = username;
    }
+<<<<<<< HEAD
 
     public DownloadableFile getCv() {
         return cv;
@@ -55,4 +69,6 @@ public class Teacher implements Serializable {
     public void setCv(DownloadableFile cv) {
         this.cv = cv;
     }
+=======
+>>>>>>> parent of be203f3... .
 }

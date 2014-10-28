@@ -48,6 +48,10 @@ public abstract class AbstractPersister<T> {
 
     /** Returns the object with primary key id */
     public T find(Object id) {
+<<<<<<< HEAD
+=======
+System.out.println("find(" + id + ")");
+>>>>>>> parent of be203f3... .
         return getEntityManager().find(entityClass, id);
     }
 

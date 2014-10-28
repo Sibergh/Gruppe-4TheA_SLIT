@@ -6,10 +6,13 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
     <title>Facelet Title</title>
+<<<<<<< HEAD
     
     <f:metadata>
       <f:viewParam name="id" value="#{moduleBean.id}" />
     </f:metadata>
+=======
+>>>>>>> parent of be203f3... .
   </h:head>
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
@@ -17,6 +20,7 @@
         
         <h2>Lag modul</h2>
         <h:form id="moduleform">
+<<<<<<< HEAD
             <h:panelGrid columns="2">
                 
             <h:outputText value="Id" rendered="#{moduleBean.updating}" />
@@ -53,6 +57,30 @@
                            action="#{moduleBean.cancelModuleCreation}" />
           </h:panelGroup>
         </h:panelGrid>
+=======
+          <h:panelGrid columns="2">
+            <h:outputText value="Modul navn:"/>
+            <h:panelGroup>
+                <h:inputText id="name" value="#{moduleBean.selectedModule.name}"/>
+                <h:message for="name"/>
+            </h:panelGroup>
+
+            <h:outputText value="Beskrivelse:"/>
+            <h:panelGroup>
+              <h:inputTextarea id="description" value="#{moduleBean.selectedModule.description}"/>
+              <h:message for="description"/>
+            </h:panelGroup>
+
+            <h:outputText value="&nbsp;"/>
+            <h:panelGroup>
+              <h:commandButton value="Save"
+                               action="#{moduleBean.saveSelectedModule()}"/>
+              &nbsp;
+              <h:commandButton value="Cancel" immediate="true"
+                               action="courses"/>
+            </h:panelGroup>
+          </h:panelGrid>
+>>>>>>> parent of be203f3... .
         </h:form>
         
         

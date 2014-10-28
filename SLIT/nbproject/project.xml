@@ -5,6 +5,7 @@
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>SLIT</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
+<<<<<<< HEAD
             <web-module-libraries>
                 <library dirs="200">
                     <file>${file.reference.commons-fileupload-1.2.1.jar}</file>
@@ -19,6 +20,9 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
+=======
+            <web-module-libraries/>
+>>>>>>> parent of be203f3... .
             <web-module-additional-libraries/>
             <source-roots>
                 <root id="src.dir"/>

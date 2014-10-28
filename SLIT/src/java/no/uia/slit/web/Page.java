@@ -10,10 +10,15 @@ package no.uia.slit.web;
 public enum Page {
     home("/index"),
     teacher("/teacher/index"),
+<<<<<<< HEAD
     course,
     modules,
     module,
     delete,
+=======
+    modules("courses"),
+    module("createModule"),
+>>>>>>> parent of be203f3... .
 
     admin("/admin/index"),
     users,
@@ -30,4 +35,11 @@ public enum Page {
         this.url = this.name();
     }
 
+<<<<<<< HEAD
+=======
+    public String toString() {
+        return url;
+    }
+
+>>>>>>> parent of be203f3... .
 }

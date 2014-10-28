@@ -4,13 +4,19 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 import javax.ejb.EJB;
+=======
+>>>>>>> parent of be203f3... .
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+<<<<<<< HEAD
 import no.uia.slit.ejb.StudentPersister;
 import no.uia.slit.ejb.TeacherPersister;
+=======
+>>>>>>> parent of be203f3... .
 
 /**
  *
@@ -22,12 +28,15 @@ public class AuthPersistenceService {
    @PersistenceContext
    private EntityManager em;
 
+<<<<<<< HEAD
    @EJB
    TeacherPersister teacherSvc;
 
    @EJB
    StudentPersister studentSvc;
 
+=======
+>>>>>>> parent of be203f3... .
    public AuthUser findUser(String name) {
       return em.find(AuthUser.class, name);
    }
@@ -44,6 +53,7 @@ public class AuthPersistenceService {
    }
 
    public void saveUser(AuthUser user) {
+<<<<<<< HEAD
        em.merge(user);
        if (user.getGroups().contains(AuthGroup.student)) {
            studentSvc.createStudent(user.getUsername());
@@ -60,6 +70,13 @@ public class AuthPersistenceService {
        if (u.getGroups().contains(AuthGroup.teacher))
            teacherSvc.delete(u.getUsername());
       em.remove(u);
+=======
+      em.merge(user);
+   }
+
+   public void removeUser(AuthUser user) {
+      em.remove(user);
+>>>>>>> parent of be203f3... .
    }
 
    public void createDebugData() {

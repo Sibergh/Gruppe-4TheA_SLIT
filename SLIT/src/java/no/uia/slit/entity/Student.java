@@ -8,19 +8,29 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+<<<<<<< HEAD
 import javax.persistence.NamedQuery;
+=======
+>>>>>>> parent of be203f3... .
 
 /**
  *
  * @author even
  */
 @Entity
+<<<<<<< HEAD
 @NamedQuery(name = "Student.byUsername",
         query = "select s from Student s where s.username = :username")
 public class Student {
    @Id @GeneratedValue
    private long Id;
 
+=======
+public class Student {
+   @Id @GeneratedValue
+   private long Id;
+   
+>>>>>>> parent of be203f3... .
    @Column(unique=true)
    private String username;
 

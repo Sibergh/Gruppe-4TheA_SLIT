@@ -10,6 +10,7 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
+<<<<<<< HEAD
         
        <h2>Vurdering</h2>
         
@@ -18,6 +19,12 @@
           <h:column>
             <f:facet name="header">Modulnavn</f:facet>
             <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
+=======
+        <h2>Vurdering</h2>
+        <h:dataTable styleClass="data" value="" var="m">
+          <h:column>
+            <f:facet name="header">#{uistrings.module_no}</f:facet>
+>>>>>>> parent of be203f3... .
           </h:column>
           <h:column>
             <f:facet name="header">Dato</f:facet>

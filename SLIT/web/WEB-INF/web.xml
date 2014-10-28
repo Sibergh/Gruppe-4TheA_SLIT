@@ -36,6 +36,7 @@ unchanged, for the rest of the course -->
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+<<<<<<< HEAD
     
   <filter>
     <filter-name>MyFacesExtensionsFilter</filter-name>
@@ -54,6 +55,19 @@ unchanged, for the rest of the course -->
 </filter-mapping>
 
 <!-- This tag binds the servlet to a URL pattern. All requests for URLs that
+=======
+
+  <filter>
+    <filter-name>DebugFilter</filter-name>
+    <filter-class>no.uia.slit.web.DebugFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DebugFilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+
+  <!-- This tag binds the servlet to a URL pattern. All requests for URLs that
+>>>>>>> parent of be203f3... .
   matches this pattern will be sent to the servlet. In our case all URLs ending
   with the extension .xhtml will be sent to the Faces Servlet -->
   <servlet-mapping>
@@ -61,6 +75,10 @@ unchanged, for the rest of the course -->
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of be203f3... .
   <session-config>
     <!-- The session timeout specifies how long (in minutes) the user can be
     inactive before she is logged out -->

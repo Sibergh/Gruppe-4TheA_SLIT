@@ -5,6 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
+<<<<<<< HEAD
     <title>Student Pages</title>
   </h:head>
   <h:body>
@@ -20,5 +21,20 @@
           </ui:define>
         </ui:composition>
     </h:body>
+=======
+    <title>Student pages</title>
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/masterlayout.xhtml">
+      <ui:define name="content">
+        <h2>#{uistrings.welcome}</h2>         
+      </ui:define>
+
+      <ui:define name="menuitems">
+        <ui:include src="/student/menu.xhtml" />
+      </ui:define>
+    </ui:composition>
+  </h:body>
+>>>>>>> parent of be203f3... .
 </html>
 
