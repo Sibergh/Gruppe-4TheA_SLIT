@@ -16,11 +16,8 @@
         <h2>#{uistrings.modules}</h2>
         <h3>#{uistrings.module_list_header}</h3>
         
-        <h:form>
-        <h:commandLink action="#{moduleBean.deleteModule()}" value="Slett modul"></h:commandLink>
-        </h:form>
-        
-        <h:dataTable styleClass="data" value="#{moduleBean.allModules}" var="module">
+        <h:dataTable value="#{modlistbean.modules}" var="module"
+                     styleClass="data">
           <h:column>
             <f:facet name="header">#{uistrings.module_no}</f:facet>
             #{module.id}
@@ -34,6 +31,9 @@
             #{module.description}
           </h:column>
         </h:dataTable>
+        
+        <h:link value="Lag ny modul" outcome="createModule?id=0" />
+        
       </ui:define>
 
       <ui:define name="menuitems">

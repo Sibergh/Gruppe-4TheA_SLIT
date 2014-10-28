@@ -8,7 +8,7 @@
     <title>Facelet Title</title>
     
     <f:metadata>
-      <f:viewParam name="id" value="#{moduleBean.selectedModule.id}" />
+      <f:viewParam name="id" value="#{moduleBean.id}" />
     </f:metadata>
   </h:head>
   <h:body>
@@ -17,28 +17,43 @@
         
         <h2>Lag modul</h2>
         <h:form id="moduleform">
-          <h:panelGrid columns="2">
-            <h:outputText value="Modul navn:"/>
-            <h:panelGroup>
-                <h:inputText id="name" value="#{moduleBean.selectedModule.name}"/>
-                <h:message for="name"/>
-            </h:panelGroup>
+            <h:panelGrid columns="2">
+                
+            <h:outputText value="Id" rendered="#{moduleBean.updating}" />
 
-            <h:outputText value="Beskrivelse:"/>
+                <h:outputText value="#{moduleBean.id}" rendered="#{moduleBean.updating}" />
+            
+            <h:outputText value="Modul navn" />
             <h:panelGroup>
-              <h:inputTextarea id="description" value="#{moduleBean.selectedModule.description}"/>
-              <h:message for="description"/>
+              <h:inputText id="name" label="Name"
+                           value="#{moduleBean.name}" />
+              <h:message for="name" />
             </h:panelGroup>
+            
+            <h:outputText value="Description" />
+            <h:panelGroup>
+              <h:inputTextarea id="description" label="Description"
+                           value="#{moduleBean.description}" />
+              <h:message for="description" />
+            </h:panelGroup>
+          
 
-            <h:outputText value="&nbsp;"/>
-            <h:panelGroup>
-              <h:commandButton value="Save"
-                               action="#{moduleBean.saveSelectedModule()}"/>
-              &nbsp;
-              <h:commandButton value="Cancel" immediate="true"
-                               action="courses"/>
-            </h:panelGroup>
-          </h:panelGrid>
+          <!-- the available actions are displayed as buttons. The delete
+          action is only meaningful for existing departments -->
+          <!-- the cancel button needs an immediate="true" attribute, to
+           bypass input validation -->
+          <h:panelGroup>
+          <h:commandButton value="Lagre ny modul"
+                           action="#{moduleBean.saveModule}" />
+          <h:commandButton value="Slett modul"
+                           action="#{moduleBean.deleteModule}" rendered="#{moduleBean.updating}" />
+          <h:commandButton value="Endre modul"
+                           action="#{moduleBean.editModule}" rendered="#{moduleBean.updating}" />
+          <h:commandButton value="Avbryt"
+                           immediate="true"
+                           action="modules" />
+          </h:panelGroup>
+        </h:panelGrid>
         </h:form>
         
         

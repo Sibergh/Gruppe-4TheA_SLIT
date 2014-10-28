@@ -10,11 +10,9 @@ package no.uia.slit.web;
 public enum Page {
     home("/index"),
     teacher("/teacher/index"),
-    modules("courses"),
-    module("createModule"),
-    dispMod("displayModule"),
-    doneDelete("modules"),
-    delete("deleteModule"),
+    modules,
+    module,
+    delete,
 
     admin("/admin/index"),
     users,
@@ -29,10 +27,6 @@ public enum Page {
 
     Page() {
         this.url = this.name();
-    }
-
-    public String toString() {
-        return url;
     }
 
 }

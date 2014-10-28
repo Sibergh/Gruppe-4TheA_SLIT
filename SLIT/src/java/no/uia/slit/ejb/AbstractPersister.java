@@ -48,7 +48,6 @@ public abstract class AbstractPersister<T> {
 
     /** Returns the object with primary key id */
     public T find(Object id) {
-System.out.println("find(" + id + ")");
         return getEntityManager().find(entityClass, id);
     }
 
