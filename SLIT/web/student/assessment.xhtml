@@ -10,10 +10,14 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>Vurdering</h2>
-        <h:dataTable styleClass="data" value="" var="m">
+        
+       <h2>Vurdering</h2>
+        
+        
+        <h:dataTable styleClass="data" value="#{modlistbean.modules}" var="module">
           <h:column>
-            <f:facet name="header">#{uistrings.module_no}</f:facet>
+            <f:facet name="header">Modulnavn</f:facet>
+            <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
           </h:column>
           <h:column>
             <f:facet name="header">Dato</f:facet>

@@ -18,14 +18,22 @@
             <f:selectItem id="course1" itemLabel="IS-102" itemValue="1" />
             <f:selectItem id="course2" itemLabel="IS-200" itemValue="2" />
       </h:selectOneMenu>
+      
       <br/>
       <br/>
-      <div id="module_square">Modul 1</div>
-      <div id="module_square">Modul 2</div>
-      <div id="module_square">Modul 3</div>
-      <div id="module_square">Modul 4</div>
-      <div id="module_square">Modul 5</div>
-      <div id="module_square">Modul 6</div>
+      
+      <h:dataTable value="#{modlistbean.modules}" var="module" 
+                     styleClass="data">
+          <h:column>
+            <f:facet name="header">#{uistrings.module_name}</f:facet>
+            <h:link outcome="createModule?id=#{module.id}">#{module.name}</h:link>
+          </h:column>
+          <h:column>
+            <f:facet name="header">#{uistrings.module_description}</f:facet>
+            #{module.description}
+          </h:column>
+        </h:dataTable>
+      
       
       </ui:define>
         
