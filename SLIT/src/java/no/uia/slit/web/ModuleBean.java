@@ -23,6 +23,7 @@ public class ModuleBean implements Serializable {
     private Module module;
     private boolean updating;
     private boolean notupdating;
+    private boolean isDelivered;
     
     private long id;
     private String name;
