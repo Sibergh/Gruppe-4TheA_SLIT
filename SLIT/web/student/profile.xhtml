@@ -19,18 +19,18 @@
                 
             <div id="grey_pictureframe"><br/>BILDE
             </div>
-                
+            <h:outputText value="Id" rendered="#{studentBean.updating}"/>
+                          <h:outputText value="#{studentBean.id}" rendered="#{studentBean.updating}"/>
             
             <p>Brukernavn: <h:outputText rendered="#{authInfoBean.loggedIn}" value="#{authInfoBean.userName}"/></p>
-            <p>Fornavn:</p>
-            <p>Etternavn:</p>
-            <p>Epost:</p>
-            <p>Telefon:</p>
+                              <p>Fornavn: <h:outputText value="#{studenBean.fornavn}"/></p>
+                              <p>Etternavn: <h:outputText value="#{studentBean.etternavn}"/></p>
+                              <p>Epost: <h:outputText value="#{studentBean.epost}"/></p>
+                              <p>Telefon: <h:outputText value="#{studentBean.telefon}"/></p>
             <p>Kurs:</p>
-            
+
         </div>
 <!-- ======= -->
-        
         
 <!-- >>>>>>> origin/master -->
       </ui:define>

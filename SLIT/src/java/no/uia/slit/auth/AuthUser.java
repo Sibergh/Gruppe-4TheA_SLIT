@@ -21,6 +21,7 @@ import javax.persistence.JoinColumn;
 @Entity
 public class AuthUser implements Serializable {
    @Id
+   @Column(unique=true)
    private String username;
    private String password;
    @ElementCollection(fetch= FetchType.EAGER)
