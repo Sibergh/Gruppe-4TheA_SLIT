@@ -39,4 +39,10 @@ public class StudentPersister extends AbstractPersister<Student>{
         List<Student> ls = q.getResultList();
         if (ls.size() == 1) delete(ls.get(0));
     }
+    
+    public Student find(long id) {
+        Student student = super.find(id);
+        if (null != student) student.getFornavn();
+        return student;
+    }
 }

@@ -4,6 +4,7 @@
  */
 package no.uia.slit.entity;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,12 +18,21 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQuery(name = "Student.byUsername",
         query = "select s from Student s where s.username = :username")
-public class Student {
+public class Student implements Serializable {
    @Id @GeneratedValue
    private long Id;
 
    @Column(unique=true)
    private String username;
+   
+   private String fornavn;
+   private String etternavn;
+   
+   @Column(unique=true)
+   private String epost;
+   
+   @Column(unique=true)
+   private int telefon;
 
    public Student() {
    }
@@ -64,4 +74,40 @@ public class Student {
       }
       return true;
    }
+
+
+// -------
+
+public String getFornavn() {
+        return fornavn;
+    }
+
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
+    }
+
+    public String getEtternavn() {
+        return etternavn;
+    }
+
+    public void setEtternavn(String etternavn) {
+        this.etternavn = etternavn;
+    }
+
+    public String getEpost() {
+        return epost;
+    }
+
+    public void setEpost(String epost) {
+        this.epost = epost;
+    }
+
+    public int getTelefon() {
+        return telefon;
+    }
+
+    public void setTelefon(int telefon) {
+        this.telefon = telefon;
+    }
+    
 }
