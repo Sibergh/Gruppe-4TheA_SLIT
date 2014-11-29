@@ -14,6 +14,7 @@ public enum Page {
     modules,
     module,
     delete,
+    studentProfile ("profile"),
 
     admin("/admin/index"),
     users,

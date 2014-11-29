@@ -11,33 +11,39 @@
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
 <!-- <<<<<<< HEAD -->
-        
-            
-            <h2>Endre profil</h2>
+        <h:outputText value="Id" rendered="#{studentBean.updating}"/>
+        <h:outputText value="#{studentBean.id}" rendered="#{studentBean.updating}"/>
+            <h2>Endre #{debugBean.userName}'s profil</h2>
                
            <div id="grey_pictureframe"><br/>BILDE
             </div>
             <h:form id="userform">
-          <h:panelGrid columns="2">
-
+            <h:panelGrid columns="2">
+                
+            
+            <h:outputText value="Brukernavn: "/>
+            <h:panelGroup>
+                <h:outputText value="#{authInfoBean.userName}"/>
+            </h:panelGroup>
+                
             <h:outputText value="Fornavn:"/>
             <h:panelGroup>
-                <h:inputText id="fornavn" value=""/>
+                <h:inputText id="fornavn" value="#{studentBean.fornavn}"/>
             </h:panelGroup>
             
             <h:outputText value="Etternavn:"/>
             <h:panelGroup>
-                <h:inputText id="etternavn" value=""/>
+                <h:inputText id="etternavn" value="#{studentBean.etternavn}"/>
             </h:panelGroup>
 
             <h:outputText value="E-post:"/>
             <h:panelGroup>
-                <h:inputText id="epost" value=""/>
+                <h:inputText id="epost" value="#{studentBean.epost}"/>
             </h:panelGroup>
             
             <h:outputText value="Phone nr.:"/>
             <h:panelGroup>
-                <h:inputText id="phone" value=""/>
+                <h:inputText id="phone" value="#{studentBean.telefon}"/>
             </h:panelGroup>
             
             <h:outputText value="Kurs:"/>
@@ -47,11 +53,11 @@
             
             <h:outputText value="&nbsp;"/>
             <h:panelGroup>
-              <h:commandButton value="Save"
-                               action="#{authBean.saveSelectedUser()}"/>
+              <h:commandButton value="Lagre"
+                               action="#{studentBean.saveProfile}"/>
               &nbsp;
-              <h:commandButton value="Cancel" immediate="true"
-                               action="profile"/>
+              <h:commandButton value="Avbryt" immediate="true"
+                               action="profile.xhtml"/>
             </h:panelGroup>
           </h:panelGrid>
         </h:form>
