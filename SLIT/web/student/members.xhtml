@@ -5,38 +5,44 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
-    <title>Facelet Title</title>
+    <title>Student pages</title>
   </h:head>
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-
-        <h2>Vurdering</h2>
         
+          <h2>Medlemmer</h2>
         
-        <h:dataTable styleClass="data" value="#{modlistbean.modules}" var="module">
+        <h:form>
+            Finn medlem:
+            <input type="search" name="student"/>
+            <input type="submit" value="Søk"/>
+        </h:form>
+        
+        <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
           <h:column>
-            <f:facet name="header">Modulnavn</f:facet>
-            <h:link outcome="module?id=#{module.id}">#{module.name}</h:link>
+            <f:facet name="header">Navn</f:facet>
+            <h:outputText value="#{user.username}" />
           </h:column>
           <h:column>
-            <f:facet name="header">Dato</f:facet>
+            <f:facet name="header">Status modul: (Søkt Modul)</f:facet>
           </h:column>
           <h:column>
-            <f:facet name="header">Filnavn</f:facet>
+            <f:facet name="header">Pågående modul</f:facet>
           </h:column>
           <h:column>
-            <f:facet name="header">Kommentar</f:facet>
-          </h:column>
+            <f:facet name="header">Telefon</f:facet>
+          </h:column>  
           <h:column>
-            <f:facet name="header">Vurdering</f:facet>
+            <f:facet name="header">Rolle</f:facet>
+            <h:outputText value="#{user.groups}" />
           </h:column>
         </h:dataTable>
         
       </ui:define>
-      
+
       <ui:define name="menuitems">
-        <ui:include src="/teacher/menu.xhtml" />
+        <ui:include src="/student/menu.xhtml" />
       </ui:define>
     </ui:composition>
   </h:body>
