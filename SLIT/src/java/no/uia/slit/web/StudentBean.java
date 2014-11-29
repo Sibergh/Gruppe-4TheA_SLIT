@@ -44,8 +44,8 @@ public class StudentBean implements Serializable {
 
         Student student = studentSvc.find(id);
         if (null == student) {
-            // we will get here if depNo is not a valid, or if
-            // depNo is valid but there is no department with that depno
+            // we will get here if student is not, or if
+            // student is valid but there is no department with that student
             updating = false;
             Id = 0;
             username = 
@@ -64,6 +64,28 @@ public class StudentBean implements Serializable {
             this.telefon = student.getTelefon();
         }
     }
+    
+    
+    private Student createStudObject() {
+        Student stud = new Student();
+        stud.setId(Id);
+        stud.setFornavn(fornavn);
+        stud.setEtternavn(etternavn);
+        stud.setEpost(epost);
+        stud.setTelefon(telefon);
+        return stud;
+    }
+
+    public Page saveProfile() {
+        Student stud = createStudObject();
+        studentSvc.update(stud);
+        return Page.home;
+    }
+    
+    public Page cancelEditProfile (){
+        conv.end();
+        return Page.studentProfile;
+}
     
     public boolean isUpdating(){
         return updating;
