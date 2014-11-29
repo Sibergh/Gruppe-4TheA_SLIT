@@ -36,9 +36,9 @@ public class UploadBean {
 
         // Now you can save bytes in DB (and also content type?)
         DownloadableFile file = new DownloadableFile((fileName), contentType, bytes.length, bytes);
-
+        
         storeFile(file);
-
+        
     }
 
     protected void storeFile(DownloadableFile file) {
