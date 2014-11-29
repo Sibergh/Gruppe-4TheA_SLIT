@@ -19,6 +19,7 @@ import no.uia.slit.entity.Student;
  *
  * @author NicolaiJuul
  */
+
 @Named("studentBean")
 @ConversationScoped
 public class StudentBean implements Serializable {
@@ -26,7 +27,7 @@ public class StudentBean implements Serializable {
     @Inject private Conversation conv;
     @EJB StudentPersister studentSvc;
     
-    private long Id;
+    private long id;
     private String username;
     private String fornavn;
     private String etternavn;
@@ -47,8 +48,7 @@ public class StudentBean implements Serializable {
             // we will get here if student is not, or if
             // student is valid but there is no department with that student
             updating = false;
-            Id = 0;
-            username = 
+            username = "";
             fornavn = "";
             etternavn = "";
             epost = "";
@@ -56,7 +56,7 @@ public class StudentBean implements Serializable {
         }
         else {
             updating = true;
-            this.Id = student.getId();
+            this.id = student.getId();
             this.username = student.getUsername();
             this.fornavn = student.getFornavn();
             this.etternavn = student.getEtternavn();
@@ -64,11 +64,10 @@ public class StudentBean implements Serializable {
             this.telefon = student.getTelefon();
         }
     }
-    
-    
+
     private Student createStudObject() {
         Student stud = new Student();
-        stud.setId(Id);
+        stud.setId(id);
         stud.setFornavn(fornavn);
         stud.setEtternavn(etternavn);
         stud.setEpost(epost);
@@ -79,64 +78,51 @@ public class StudentBean implements Serializable {
     public Page saveProfile() {
         Student stud = createStudObject();
         studentSvc.update(stud);
-        return Page.home;
+        return Page.sP;
     }
     
     public Page cancelEditProfile (){
         conv.end();
-        return Page.studentProfile;
+        return Page.sP;
 }
-    
+   
+// ------- Getters & Setters 
     public boolean isUpdating(){
-        return updating;
-    }
+        return updating;}
     
     public long getId() {
-        return Id;
-    }
+        return id;}
 
-    public void setId(long Id) {
-        this.Id = Id;
-    }
+    public void setId(long id) {
+        this.id = id;}
 
     public String getUsername() {
-        return username;
-    }
+        return username;}
 
     public void setUsername(String username) {
-        this.username = username;
-    }
+        this.username = username;}
 
     public String getFornavn() {
-        return fornavn;
-    }
+        return fornavn;}
 
     public void setFornavn(String fornavn) {
-        this.fornavn = fornavn;
-    }
+        this.fornavn = fornavn;}
 
     public String getEtternavn() {
-        return etternavn;
-    }
+        return etternavn;}
 
     public void setEtternavn(String etternavn) {
-        this.etternavn = etternavn;
-    }
+        this.etternavn = etternavn;}
 
     public String getEpost() {
-        return epost;
-    }
+        return epost;}
 
     public void setEpost(String epost) {
-        this.epost = epost;
-    }
+        this.epost = epost;}
 
     public int getTelefon() {
-        return telefon;
-    }
+        return telefon;}
 
     public void setTelefon(int telefon) {
-        this.telefon = telefon;
-    }
-    
+        this.telefon = telefon;}
 }

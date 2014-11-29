@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -20,7 +21,7 @@ import javax.persistence.NamedQuery;
         query = "select s from Student s where s.username = :username")
 public class Student implements Serializable {
    @Id @GeneratedValue
-   private long Id;
+   private long id;
 
    @Column(unique=true)
    private String username;
@@ -34,80 +35,60 @@ public class Student implements Serializable {
    @Column(unique=true)
    private int telefon;
 
-   public Student() {
-   }
 
-   public long getId() {
-      return Id;
-   }
-
-   public void setId(long Id) {
-      this.Id = Id;
-   }
-
-   public String getUsername() {
-      return username;
-   }
-
-   public void setUsername(String username) {
-      this.username = username;
-   }
-
+   
    @Override
    public int hashCode() {
       int hash = 3;
-      hash = 67 * hash + (int) (this.Id ^ (this.Id >>> 32));
-      return hash;
-   }
+      hash = 67 * hash + (int) (this.id ^ (this.id >>> 32));
+      return hash;}
 
    @Override
    public boolean equals(Object obj) {
       if (obj == null) {
-         return false;
-      }
+         return false;}
       if (getClass() != obj.getClass()) {
-         return false;
-      }
+         return false;}
       final Student other = (Student) obj;
-      if (this.Id != other.Id) {
-         return false;
-      }
-      return true;
-   }
+      if (this.id != other.id) {
+         return false;}
+      return true;}
 
 
-// -------
+// ------- Getters & Setters
+    public long getId() {
+      return id;}
 
-public String getFornavn() {
-        return fornavn;
-    }
+    public void setId(long id) {
+      this.id = id;}
+
+    public String getUsername() {
+      return username;}
+
+    public void setUsername(String username) {
+      this.username = username;}
+   
+    public String getFornavn() {
+        return fornavn;}
 
     public void setFornavn(String fornavn) {
-        this.fornavn = fornavn;
-    }
+        this.fornavn = fornavn;}
 
     public String getEtternavn() {
-        return etternavn;
-    }
+        return etternavn;}
 
     public void setEtternavn(String etternavn) {
-        this.etternavn = etternavn;
-    }
+        this.etternavn = etternavn;}
 
     public String getEpost() {
-        return epost;
-    }
+        return epost;}
 
     public void setEpost(String epost) {
-        this.epost = epost;
-    }
+        this.epost = epost;}
 
     public int getTelefon() {
-        return telefon;
-    }
+        return telefon;}
 
     public void setTelefon(int telefon) {
-        this.telefon = telefon;
-    }
-    
+        this.telefon = telefon;} 
 }
