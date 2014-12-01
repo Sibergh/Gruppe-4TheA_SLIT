@@ -33,15 +33,15 @@
                           value="#{uistrings.logged_in_as} #{authInfoBean.userName}"/>
             <h:outputText rendered="#{not authInfoBean.loggedIn}"
                           value="#{uistrings.not_logged_in}"/>
+            <ul>
+                <button onclick="popUp()" >logg Ut</button>
+            </ul>
           </p>
           <h3>#{uistrings.menu_h1}</h3>
           <ul>
-            <li>
-              <h:form rendered="#{authInfoBean.isLoggedIn()}">
-                <h:commandLink action="#{authInfoBean.logout()}" value="#{uistrings.logout}"/>
-              </h:form>
-            </li>
+              
             <ui:insert name="menuitems"/>
+              
           </ul>
         </div>
       </div>
@@ -51,4 +51,16 @@
       <h:messages/>
     </div>
   </h:body>
+    
+    <!--Javascript -> popup som redirecter til login side-->
+   <script>
+    function popUp() {
+        if (confirm("Hei " + #{authInfoBean.userName} + "! Er du sikker på at du vil logge ut?") == true) {
+          window.location="/slit/startgruppe.xhtml";
+        } else {
+            ;
+        }
+    }
+    </script>
+    
 </html>

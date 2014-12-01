@@ -176,3 +176,8 @@ div.layout-outer {
     margin:10px;
 
 }
+
+.failback {
+    background: url(../images/nopass.jpg)   no-repeat 50% 50% fixed;
+
+}

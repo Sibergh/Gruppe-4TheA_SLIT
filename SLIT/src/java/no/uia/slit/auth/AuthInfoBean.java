@@ -27,9 +27,10 @@ public class AuthInfoBean {
         return JsfUtils.getUserName();
     }
 
+    //sender bruker til innlogging når bruker logger ut
     public String logout() {
         JsfUtils.logout();
-        return "/index";
+        return "/startgruppe";
     }
 
     public String getInfo() {
