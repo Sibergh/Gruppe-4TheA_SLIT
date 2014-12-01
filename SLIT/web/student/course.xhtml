@@ -29,6 +29,10 @@
             <h:link outcome="module?id=#{module.id}">#{module.name}</h:link>
           </h:column>
           <h:column>
+            <f:facet name="header">Innlevert</f:facet>
+            
+          </h:column>
+          <h:column>
             <f:facet name="header">#{uistrings.module_description}</f:facet>
             #{module.description}
           </h:column>

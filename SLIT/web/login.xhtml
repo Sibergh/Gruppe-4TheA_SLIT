@@ -31,7 +31,10 @@
         </form>
       </ui:define>
       <ui:define name="menuitems">
-        <li><h:link value="#{uistrings.cancel}" outcome="index"/></li>
+        <li><h:link value="Forside" outcome="index"/></li>
+        <li><h:link value="#{uistrings.student_pages}" outcome="student/index"/></li>
+        <li><h:link value="#{uistrings.teacher_pages}" outcome="teacher/index"/></li>
+        <li><h:link value="#{uistrings.admin_pages}" outcome="admin/index"/></li>
       </ui:define>
     </ui:composition>
   </h:body>

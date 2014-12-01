@@ -16,8 +16,10 @@
         
         <h:dataTable styleClass="data" value="#{modlistbean.modules}" var="module">
           <h:column>
-            <f:facet name="header">Modulnavn</f:facet>
-            <h:link outcome="module?id=#{module.id}">#{module.name}</h:link>
+            <f:facet name="header">Studentnavn</f:facet>
+          </h:column>
+          <h:column>
+            <f:facet name="header">Modul for godkjenning</f:facet>
           </h:column>
           <h:column>
             <f:facet name="header">Dato</f:facet>

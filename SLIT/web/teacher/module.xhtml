@@ -57,13 +57,29 @@
         </h:panelGrid>
         </h:form>
         
+        <br/>
+        
+
         <h:form enctype="multipart/form-data">
           <t:inputFileUpload label="Velg fil" value="#{uploadbean.upload}"/>
           <br/>
           <!-- and this button triggers the uploading and persisting process -->
           <h:commandButton value="Last opp fil" action="#{uploadbean.submit()}"/>
+          
         </h:form>
         
+        <br/>
+        
+        <h:dataTable value="#{teacherListBean.list}" var="t" >
+              <h:column>
+                  <h:outputText value="Dokument" style="font-weight:bold"/>
+                
+                <f:facet name="header"></f:facet>
+                <h:form rendered="#{! (empty t.cv)}">
+                  <h:commandLink value='Last ned dokument' action='#{downloadBean.downloadFile(t.cv.id)}'/>
+                </h:form>
+              </h:column>
+            </h:dataTable>
         
       </ui:define>
 

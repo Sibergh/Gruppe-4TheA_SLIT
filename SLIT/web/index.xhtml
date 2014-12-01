@@ -12,33 +12,20 @@
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
-        <h2>#{uistrings.welcome}</h2>
-        <p>#{uistrings.intro}</p>
-        <p>#{uistrings.guide}</p>
-
+        <h2>Velkommen til SLIT</h2>
+        <p>Hvis dette er første gang du besøker SLIT som student, vennligst 
+           få en lærer til å opprette deg en bruker.</p>
+        <p>Når du har mottatt et brukernavn og passord, enten klikk deg inn på 
+           student sidene i venstre marg av siden, eller klikk 
+           <h:link value="her" outcome="student/index"/> for 
+           å komme i gang.</p>
+        <br/>
         <hr/>
 
-        <h2>Dette er en nettside</h2>
-        <h3>Registered users:</h3>
-        <h:dataTable value="#{authBean.users}" var="user" styleClass="data">
-          <h:column>
-            <f:facet name="header">#{uistrings.username}</f:facet>
-            #{user.username}
-          </h:column>
-          <h:column>
-            <f:facet name="header">#{uistrings.password}</f:facet>
-            #{user.password}
-          </h:column>
-          <h:column>
-            <f:facet name="header">#{uistrings.groups}</f:facet>
-            #{user.groups}
-          </h:column>
-        </h:dataTable>
-
         <h:form>
-          <p>If no users are registered, click
-            <h:commandLink action="#{authBean.createDebugData()}" value="here"/>
-            to create an admin user</p>
+          <p>Dersom ingen administrator er registrert, vennligst klikk
+            <h:commandLink action="#{authBean.createDebugData()}" value="her"/>
+            for å opprette en ny. (vil ikke være i det fullstendige systemet</p>
         </h:form>
       </ui:define>
 
