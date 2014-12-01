@@ -178,6 +178,13 @@ div.layout-outer {
 }
 
 .failback {
-    background: url(../images/nopass.jpg)   no-repeat 50% 50% fixed;
+    background: url(../images/back_login5.jpg)  no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-height: cover;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
 
 }

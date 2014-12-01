@@ -21,6 +21,9 @@ h3 {
   background-color: #DEDEDE;
 }
 
+#p_small{
+    font-size:18px;
+}
 
 .layout-outer {
   background:#fff;    /* right column background colour */

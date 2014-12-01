@@ -20,11 +20,15 @@
             <h>Velg brukergruppe</h>
             <br/>
             <br/>
-            
             <!--Knapper for å velge hvilke brukergrupper en skal logge seg inn som-->
                 <a class="button1" type="submit" href="/slit/student/index.xhtml"> #{uistrings.student}</a>
                 <a class="button1" type="submit" href="/slit/teacher/index.xhtml"> #{uistrings.teacher}</a>
                 <a class="button1" type="submit" href="/slit/admin/index.xhtml"> #{uistrings.admin}</a>
+            <h:form>
+          <p id='p_small'>Klikk 
+            <h:commandLink action="#{authBean.createDebugData()}" value="her"/>
+            for å opprette en ny admin. (for testing.)</p>
+        </h:form>
         </div>   
     </h:body>
 </html>
