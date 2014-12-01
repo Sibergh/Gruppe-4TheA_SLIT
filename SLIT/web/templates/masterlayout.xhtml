@@ -12,6 +12,20 @@
     <title>#{uistrings.app_abbrev}</title>
     <h:outputStylesheet library="css" name="layout.css" />
     <h:outputStylesheet library="css" name="format.css" />
+    
+    
+        <!--Javascript -> popup som redirecter til login side
+   <script>
+    function popUp() {
+        if (confirm("Hei " + #{authInfoBean.userName} + "! Er du sikker på at du vil logge ut?") === true) {
+          window.location="/slit/startgruppe.xhtml";
+            }
+          else {}
+    }
+    </script>
+    -->
+    
+    
   </h:head>
   <h:body>
     <div class="layout-header">
@@ -34,7 +48,8 @@
             <h:outputText rendered="#{not authInfoBean.loggedIn}"
                           value="#{uistrings.not_logged_in}"/>
             <ul>
-                <button onclick="popUp()" >logg Ut</button>
+                <a href="../">Logg Ut</a>               <!--onclisk kjører scriptet for utlogging
+                <button onclick="popUp()"> logg Ut </button>-->
             </ul>
           </p>
           <h3>#{uistrings.menu_h1}</h3>
@@ -52,15 +67,6 @@
     </div>
   </h:body>
     
-    <!--Javascript -> popup som redirecter til login side-->
-   <script>
-    function popUp() {
-        if (confirm("Hei " + #{authInfoBean.userName} + "! Er du sikker på at du vil logge ut?") == true) {
-          window.location="/slit/startgruppe.xhtml";
-        } else {
-            ;
-        }
-    }
-    </script>
+
     
 </html>
