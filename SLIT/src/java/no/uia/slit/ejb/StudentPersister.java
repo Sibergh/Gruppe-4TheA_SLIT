@@ -2,6 +2,7 @@ package no.uia.slit.ejb;
 
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -12,6 +13,7 @@ import no.uia.slit.entity.Student;
  * @author evenal
  */
 @Stateless
+@Named("stp")
 public class StudentPersister extends AbstractPersister<Student>{
 
     @PersistenceContext

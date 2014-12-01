@@ -6,59 +6,45 @@
       xmlns:ui="http://java.sun.com/jsf/facelets">
   <h:head>
     <title>Profile</title>
+  <f:metadata>
+      <f:viewParam name="id" value="#{studentBean.id}" />
+  </f:metadata>
   </h:head>
   <h:body>
     <ui:composition template="/templates/masterlayout.xhtml">
       <ui:define name="content">
 <!-- <<<<<<< HEAD -->
-        <h:outputText value="Id" rendered="#{studentBean.updating}"/>
-        <h:outputText value="#{studentBean.id}" rendered="#{studentBean.updating}"/>
-            <h2>Endre #{debugBean.userName}'s profil</h2>
+        
+        <h2>Endre #{studentBean.fornavn}  #{studentBean.etternavn}'s profil</h2>
                
-           <div id="grey_pictureframe"><br/>BILDE
-            </div>
-            <h:form id="userform">
-            <h:panelGrid columns="2">
-                
+        <div id="grey_pictureframe"><br/>BILDE</div>
+            
+        <h:form id="userform">
+        <h:panelGrid columns="2">
+
+            <h:outputText value="Id" rendered="#{studentBean.updating}" />
+            <h:outputText value="#{studentBean.id}" rendered="#{studentBean.updating}" />
             
             <h:outputText value="Brukernavn: "/>
-            <h:panelGroup>
-                <h:outputText value="#{authInfoBean.userName}"/>
-            </h:panelGroup>
+            <h:panelGroup><h:outputText value="#{studentBean.username}"/></h:panelGroup>
                 
             <h:outputText value="Fornavn:"/>
-            <h:panelGroup>
-                <h:inputText id="fornavn" value="#{studentBean.fornavn}"/>
-            </h:panelGroup>
+            <h:panelGroup><h:inputText id="fornavn" value="#{studentBean.fornavn}"/></h:panelGroup>
             
             <h:outputText value="Etternavn:"/>
-            <h:panelGroup>
-                <h:inputText id="etternavn" value="#{studentBean.etternavn}"/>
-            </h:panelGroup>
+            <h:panelGroup><h:inputText id="etternavn" value="#{studentBean.etternavn}"/></h:panelGroup>
 
             <h:outputText value="E-post:"/>
-            <h:panelGroup>
-                <h:inputText id="epost" value="#{studentBean.epost}"/>
-            </h:panelGroup>
+            <h:panelGroup><h:inputText id="epost" value="#{studentBean.epost}"/></h:panelGroup>
             
             <h:outputText value="Phone nr.:"/>
-            <h:panelGroup>
-                <h:inputText id="phone" value="#{studentBean.telefon}"/>
-            </h:panelGroup>
+            <h:panelGroup><h:inputText id="phone" value="#{studentBean.telefon}"/></h:panelGroup>
             
             <h:outputText value="Kurs:"/>
-            <h:panelGroup>
-                <h:inputText id="course" value=""/>
-            </h:panelGroup>
+            <h:panelGroup><h:outputText id="course" value="Ikke implementert"/></h:panelGroup>
             
             <h:outputText value="&nbsp;"/>
-            <h:panelGroup>
-              <h:commandButton value="Lagre"
-                               action="#{studentBean.saveProfile}"/>
-              &nbsp;
-              <h:commandButton value="Avbryt" immediate="true"
-                               action="profile.xhtml"/>
-            </h:panelGroup>
+            <h:panelGroup><h:commandButton value="Lagre" action="#{studentBean.saveProfile}"/><h:commandButton value="Avbryt" immediate="true" action="profile"/></h:panelGroup>
           </h:panelGrid>
         </h:form>
         

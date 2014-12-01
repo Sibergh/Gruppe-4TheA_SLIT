@@ -135,3 +135,6 @@ border: solid 1px;
     text-decoration: none;
     color: black;
 } 
+
+#editprofile{display: inline;}
+#editprofilebutton{display: inline-block;float: right;}

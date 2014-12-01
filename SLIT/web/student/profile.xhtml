@@ -13,23 +13,36 @@
 <!-- <<<<<<< HEAD -->
         <div name="mainbox">
             <form style="display: inline" action="editProfile.xhtml">
-            <button style="display: inline-block;float: right;">Rediger profil</button>
+                <button style="display: inline-block;float: right;" action="">Rediger profil</button>
             </form>
-            <h2>#{debugBean.userName}'s profil</h2>
+            <h2>#{authInfoBean.userName}'s profil</h2>
                 
-            <div id="grey_pictureframe"><br/>BILDE
-            </div>
-            <h:outputText value="Id" rendered="#{studentBean.updating}"/>
-                          <h:outputText value="#{studentBean.id}" rendered="#{studentBean.updating}"/>
+            <div id="grey_pictureframe"><br/>BILDE</div>
             
-            <p>Brukernavn: <h:outputText value="#{authInfoBean.userName}"/></p>
-            <p>Fornavn: <h:outputText value="#{student.fornavn}"/></p>
-            <p>Etternavn: <h:outputText value="#{student.etternavn}"/></p>
-            <p>Epost: <h:outputText value="#{student.epost}"/></p>
-            <p>Telefon: <h:outputText value="#{student.telefon}"/></p>
-            <p>Kurs:</p>
-
+        <h:panelGrid columns="2">
+            
+        <h:outputText value="Id" rendered="#{moduleBean.updating}" />
+        <h:outputText value="#{moduleBean.id}" rendered="#{moduleBean.updating}" />          
+            
+        <h:outputText value="Brukernavn: "/>
+        <h:panelGroup><h:outputText value="#{studentBean.username}"/></h:panelGroup>
+        
+        <h:outputText value="Fornavn: "/>
+        <h:panelGroup><h:outputText value="#{student.fornavn}"/></h:panelGroup> 
+        
+        <h:outputText value="Etternavn: "/>
+        <h:panelGroup><h:outputText value="#{student.etternavn}"/></h:panelGroup> 
+        
+        <h:outputText value="Epost: "/>
+        <h:panelGroup><h:outputText value="#{student.epost}"/></h:panelGroup> 
+        
+        <h:outputText value="Telefon: "/>
+        <h:panelGroup><h:outputText value="#{student.telefon}"/></h:panelGroup>
+        
+        <h:outputText value="Kurs: "/><h:panelGroup><h:outputText value="Ikke implementert"/></h:panelGroup>
+        </h:panelGrid>
         </div>
+        
 <!-- ======= -->
         
 <!-- >>>>>>> origin/master -->
